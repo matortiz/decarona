@@ -1,0 +1,13 @@
+    <div class="items">
+        <?php foreach ($this->entries as $entry): ?> 
+        <div class="view">
+            <b>ID:</b>
+            <a href="<?php echo $this->url(
+            array('controller'=>'usuario'),
+            'default',
+            true) ?>"> <?php echo $this->escape($entry->id) ?></a><br />
+            <b>Nombre:</b> <?php echo $this->escape($entry->nombre) ?><br />
+            <b>Email:</b> <?php echo $this->escape($entry->email) ?><br />
+        </div>
+        <?php endforeach ?> 
+    </div>
